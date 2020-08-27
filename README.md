@@ -5,4 +5,3 @@ Through redux the age is a property and not a state. libraries used include:
 - react
 - redux
 - react-redux
-
