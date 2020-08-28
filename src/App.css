@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.historyItem{
+  list-style-type: none;
+  border: 1px solid #f9e5ad;
+  margin: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #f7e8bc70;
+}
