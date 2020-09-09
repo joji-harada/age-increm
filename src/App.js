@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { connect } from 'react-redux';
+import { ageUp, ageDown } from './store/actions/actions';
 
 class App extends React.Component {
 
@@ -41,8 +42,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onAgeUp: () => dispatch({type: 'AGE_UP', value: 1}),
-    onAgeDown: () => dispatch({type: 'AGE_DOWN', value: 1}),
+    onAgeUp: () => dispatch(ageUp(1)),
+    onAgeDown: () => dispatch(ageDown(1)),
     onDelete: (id) => dispatch({type: 'DEL_ITEM', key: id})
   };
 }
