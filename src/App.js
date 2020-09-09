@@ -1,7 +1,9 @@
 import React from 'react';
 import './App.css';
 import { connect } from 'react-redux';
+import logo from './logo.svg';
 import { ageUp, ageDown } from './store/actions/actions';
+
 
 class App extends React.Component {
 
@@ -11,6 +13,7 @@ class App extends React.Component {
         <div>Age: <span>{this.props.age}</span></div>
         <button onClick={this.props.onAgeUp}>Age Up</button>
         <button onClick={this.props.onAgeDown}>Age Down</button>
+        {this.props.loading && <img src={logo} className="App-logo"/>}
         <hr/>
         <div>History</div>
         <div>
@@ -36,7 +39,8 @@ class App extends React.Component {
 const mapStateToProps = (state) => {
   return {
     age: state.age,
-    history: state.history
+    history: state.history,
+    loading: state.loading
   }
 }
 
